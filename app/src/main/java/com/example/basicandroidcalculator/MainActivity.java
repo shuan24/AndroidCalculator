@@ -5,9 +5,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String text = calEditText.getText().toString();
                 if (!TextUtils.isEmpty(text)) {
-                    String newText = text.substring(1); //delete from left
+                    String newText = text.substring(1, text.length()); //delete from left
                     //or
                     String newText1 = text.substring(0, text.length() - 1); //delete from right
                     calEditText.setText(newText);
@@ -62,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,10 +134,8 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (calEditText == null) {
-                    calEditText.setText("");
-                } else {
+                String text = calEditText.getText().toString();
+                if (!TextUtils.isEmpty(text)) {
                     mValueOne = Double.parseDouble(calEditText.getText() + "");
                     calAddition = true;
                     calEditText.setText(null);
@@ -151,57 +146,67 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Double.parseDouble(calEditText.getText() + "");
-                calSubtract = true;
-                calEditText.setText(null);
+                String text = calEditText.getText().toString();
+                if (!TextUtils.isEmpty(text)) {
+                    mValueOne = Double.parseDouble(calEditText.getText() + "");
+                    calSubtract = true;
+                    calEditText.setText(null);
+                }
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Double.parseDouble(calEditText.getText() + "");
-                calMultiplication = true;
-                calEditText.setText(null);
+                String text = calEditText.getText().toString();
+                if (!TextUtils.isEmpty(text)) {
+                    mValueOne = Double.parseDouble(calEditText.getText() + "");
+                    calMultiplication = true;
+                    calEditText.setText(null);
+                }
             }
         });
-
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Double.parseDouble(calEditText.getText() + "");
-                calDivision = true;
-                calEditText.setText(null);
+                String text = calEditText.getText().toString();
+                if (!TextUtils.isEmpty(text)) {
+                    mValueOne = Double.parseDouble(calEditText.getText() + "");
+                    calDivision = true;
+                    calEditText.setText(null);
+                }
             }
         });
-
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Double.parseDouble(calEditText.getText() + "");
+                String text = calEditText.getText().toString();
+                if (!TextUtils.isEmpty(text)) {
+                    mValueTwo = Double.parseDouble(calEditText.getText() + "");
 
-                if (calAddition == true) {
-                    calEditText.setText(mValueOne + mValueTwo + "");
-                    calAddition = false;
-                }
+                    if (calAddition == true) {
+                        calEditText.setText(mValueOne + mValueTwo + "");
+                        calAddition = false;
+                    }
 
-                if (calSubtract == true) {
-                    calEditText.setText(mValueOne - mValueTwo + "");
-                    calSubtract = false;
-                }
+                    if (calSubtract == true) {
+                        calEditText.setText(mValueOne - mValueTwo + "");
+                        calSubtract = false;
+                    }
 
-                if (calMultiplication == true) {
-                    calEditText.setText(mValueOne * mValueTwo + "");
-                    calMultiplication = false;
-                }
+                    if (calMultiplication == true) {
+                        calEditText.setText(mValueOne * mValueTwo + "");
+                        calMultiplication = false;
+                    }
 
-                if (calDivision == true) {
-                    calEditText.setText(mValueOne / mValueTwo + "");
-                    calDivision = false;
+                    if (calDivision == true) {
+                        calEditText.setText(mValueOne / mValueTwo + "");
+                        calDivision = false;
+                    }
                 }
             }
-        });
 
+        });
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
