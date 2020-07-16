@@ -203,7 +203,7 @@
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="36sp"
         android:textStyle="bold"
-        tools:text="÷" />
+        android:text="÷" />
 
     <Button
         android:id="@+id/buttoneql"
