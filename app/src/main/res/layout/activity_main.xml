@@ -23,8 +23,7 @@
         android:layout_alignRight="@+id/button4"
         android:layout_marginTop="94dp"
         android:text="1"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button2"
@@ -35,8 +34,7 @@
         android:layout_toStartOf="@+id/button3"
         android:layout_toLeftOf="@+id/button3"
         android:text="2"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button3"
@@ -46,8 +44,7 @@
         android:layout_alignTop="@+id/button2"
         android:layout_centerHorizontal="true"
         android:text="3"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button4"
@@ -57,8 +54,7 @@
         android:layout_below="@+id/button1"
         android:layout_toLeftOf="@+id/button2"
         android:text="4"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button5"
@@ -69,8 +65,7 @@
         android:layout_alignLeft="@+id/button2"
         android:layout_alignBottom="@+id/button4"
         android:text="5"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button6"
@@ -81,8 +76,7 @@
         android:layout_alignStart="@+id/button3"
         android:layout_alignLeft="@+id/button3"
         android:text="6"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button7"
@@ -92,8 +86,7 @@
         android:layout_below="@+id/button4"
         android:layout_toLeftOf="@+id/button2"
         android:text="7"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button8"
@@ -104,8 +97,7 @@
         android:layout_alignStart="@+id/button5"
         android:layout_alignLeft="@+id/button5"
         android:text="8"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button9"
@@ -116,8 +108,7 @@
         android:layout_alignStart="@+id/button6"
         android:layout_alignLeft="@+id/button6"
         android:text="9"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/buttonadd"
@@ -132,7 +123,7 @@
         android:layout_toRightOf="@+id/button3"
         android:text="+"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold" />
 
     <Button
@@ -147,7 +138,7 @@
         android:layout_alignRight="@+id/buttonadd"
         android:text="-"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold" />
 
     <Button
@@ -162,7 +153,7 @@
         android:layout_alignParentRight="true"
         android:text="x"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
+        android:textSize="36sp"
         android:textStyle="bold" />
 
     <Button
@@ -173,8 +164,7 @@
         android:layout_below="@+id/button7"
         android:layout_toLeftOf="@+id/button2"
         android:text="."
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button0"
@@ -185,8 +175,7 @@
         android:layout_alignStart="@+id/button8"
         android:layout_alignLeft="@+id/button8"
         android:text="0"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/buttonC"
@@ -211,10 +200,10 @@
         android:layout_alignLeft="@+id/buttonmul"
         android:layout_alignEnd="@+id/buttonmul"
         android:layout_alignRight="@+id/buttonmul"
-        android:text="/"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:text="÷" />
 
     <Button
         android:id="@+id/buttoneql"
@@ -228,17 +217,20 @@
         android:layout_alignRight="@+id/buttondiv"
         android:layout_marginTop="37dp"
         android:text="="
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/eraseButton"
         style="@android:style/Widget.Button"
-        android:layout_width="100dp"
+        android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="330dp"
         android:layout_marginTop="70dp"
         android:onClick="onClick"
-        android:text="back" />
+        android:text="\u232b"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
