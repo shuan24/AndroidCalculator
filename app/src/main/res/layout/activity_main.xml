@@ -10,7 +10,8 @@
         android:id="@+id/edt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:cursorVisible="true" />
+        android:cursorVisible="true"
+        android:inputType="number" />
 
 
     <Button
@@ -225,12 +226,12 @@
         style="@android:style/Widget.Button"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="330dp"
+        android:layout_marginStart="300dp"
         android:layout_marginTop="70dp"
         android:onClick="onClick"
         android:text="\u232b"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
 </RelativeLayout>
