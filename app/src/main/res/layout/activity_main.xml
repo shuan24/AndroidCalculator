@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:cursorVisible="true"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@android:color/black" />
 
 
     <Button
@@ -123,7 +124,7 @@
         android:layout_marginLeft="46dp"
         android:layout_toRightOf="@+id/button3"
         android:text="+"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#00008B"
         android:textSize="36sp"
         android:textStyle="bold" />
 
@@ -138,7 +139,8 @@
         android:layout_alignEnd="@+id/buttonadd"
         android:layout_alignRight="@+id/buttonadd"
         android:text="-"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#00008B"
+        android:gravity="center|top"
         android:textSize="45sp"
         android:textStyle="bold" />
 
@@ -153,7 +155,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="x"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#00008B"
         android:textSize="36sp"
         android:textStyle="bold" />
 
@@ -187,7 +189,7 @@
         android:layout_alignStart="@+id/button9"
         android:layout_alignLeft="@+id/button9"
         android:text="C"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#00008B"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -201,7 +203,7 @@
         android:layout_alignLeft="@+id/buttonmul"
         android:layout_alignEnd="@+id/buttonmul"
         android:layout_alignRight="@+id/buttonmul"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#00008B"
         android:textSize="36sp"
         android:textStyle="bold"
         android:text="÷" />
@@ -219,6 +221,7 @@
         android:layout_marginTop="37dp"
         android:text="="
         android:textSize="36sp"
+        android:textColor="#00008B"
         android:textStyle="bold" />
 
     <Button
@@ -228,10 +231,11 @@
         android:layout_height="60dp"
         android:layout_marginStart="300dp"
         android:layout_marginTop="70dp"
+        android:gravity="center"
         android:onClick="onClick"
         android:text="\u232b"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="35sp"
+        android:textColor="#00008B"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 </RelativeLayout>
