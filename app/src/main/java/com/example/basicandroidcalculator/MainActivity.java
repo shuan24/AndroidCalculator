@@ -1,22 +1,22 @@
 package com.example.basicandroidcalculator;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.basicandroidcalculator.R;
 
 public class MainActivity extends AppCompatActivity {
 
     Button button0, button1, button2, button3, button4, button5, button6,
             button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
-            buttonMul, button10, buttonC, buttonEqual;
+            buttonMul, button10, buttonC, buttonEqual, myButton;
     EditText calEditText;
 
-    float mValueOne, mValueTwo;
+    Double mValueOne, mValueTwo;
 
     boolean calAddition, calSubtract, calMultiplication, calDivision;
 
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        myButton = findViewById(R.id.eraseButton);
         button0 = (Button) findViewById(R.id.button0);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
@@ -43,6 +44,24 @@ public class MainActivity extends AppCompatActivity {
         buttonC = (Button) findViewById(R.id.buttonC);
         buttonEqual = (Button) findViewById(R.id.buttoneql);
         calEditText = (EditText) findViewById(R.id.edt1);
+
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = calEditText.getText().toString();
+                if (!TextUtils.isEmpty(text)) {
+                    String newText = text.substring(1); //delete from left
+                    //or
+                    String newText1 = text.substring(0, text.length() - 1); //delete from right
+                    calEditText.setText(newText);
+                    calEditText.setSelection(newText.length());
+                    //or
+                    calEditText.setText(newText1);
+                    calEditText.setSelection(newText1.length());
+
+                }
+            }
+        });
 
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 if (calEditText == null) {
                     calEditText.setText("");
                 } else {
-                    mValueOne = (float) Double.parseDouble(calEditText.getText() + "");
+                    mValueOne = Double.parseDouble(calEditText.getText() + "");
                     calAddition = true;
                     calEditText.setText(null);
                 }
@@ -132,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = (float) Double.parseDouble(calEditText.getText() + "");
+                mValueOne = Double.parseDouble(calEditText.getText() + "");
                 calSubtract = true;
                 calEditText.setText(null);
             }
@@ -141,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = (float) Double.parseDouble(calEditText.getText() + "");
+                mValueOne = Double.parseDouble(calEditText.getText() + "");
                 calMultiplication = true;
                 calEditText.setText(null);
             }
@@ -150,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = (float) Double.parseDouble(calEditText.getText() + "");
+                mValueOne = Double.parseDouble(calEditText.getText() + "");
                 calDivision = true;
                 calEditText.setText(null);
             }
@@ -159,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(calEditText.getText() + "");
+                mValueTwo = Double.parseDouble(calEditText.getText() + "");
 
                 if (calAddition == true) {
                     calEditText.setText(mValueOne + mValueTwo + "");

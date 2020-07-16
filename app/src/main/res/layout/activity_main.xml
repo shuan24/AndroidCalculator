@@ -223,5 +223,14 @@
         android:text="="
         android:textSize="24sp"
         android:textStyle="bold" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="70dp"
+        android:onClick="onClick"
+        android:text="back"
+        android:id="@+id/eraseButton"/>
 
 </RelativeLayout>
