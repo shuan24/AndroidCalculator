@@ -227,8 +227,8 @@
     <Button
         android:id="@+id/eraseButton"
         style="@android:style/Widget.Button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="300dp"
         android:layout_marginTop="70dp"
         android:gravity="center"
